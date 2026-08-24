@@ -1,0 +1,68 @@
+/* CCS DOCUMENTO */
+@charset "UTF-8";
+
+@font-face {
+    font-family: TITULOS Righteous;
+    src: url(fonts/Righteous-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto textos;
+    src: url(fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto Subtitulos;
+    src: url(fonts/Roboto-Bold.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto italica;
+    src: url(fonts/Roboto-Italic.ttf);
+    font-weight: italic;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto destacados;
+    src: url(fonts/Roboto-Thin.ttf);
+    font-weight: thin;
+    font-style: normal;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" width;
+    background-color: brown;
+}
+
+h1,
+h3 {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Roboto bold", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: bold;
+    font-variation-settings: "wdth" width;
+}
+
+footer {
+    font-family: "Roboto destacados", sans-serif;
+    font-optical-sizing: auto;
+    font-style: 100;
+    background-color: black; 
+    color: white;
+}
