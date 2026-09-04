@@ -64,11 +64,21 @@ footer {
     color: white;
 }
 
-header {
-    list-style: none;
+nav ul {
     display: flex;
-    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+presentacion {
+    display: flex;
+    flex-wrap: nowrap;
 }
