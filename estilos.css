@@ -64,7 +64,7 @@ footer {
     color: white;
 }
 
-nav ul {
+#menu {
     display: flex;
     list-style: none;
     gap: 30px;
@@ -78,7 +78,17 @@ header {
     background-color: black;
 }
 
-presentacion {
+#inicio {
     display: flex;
     flex-wrap: nowrap;
+}
+
+#redes-sociales {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+    object-fit: fill;
+    justify-content: space-between;
 }
