@@ -1,0 +1,1 @@
+Este archivo fue realizado en windows 10 en el editor de codigo visual estudio code en una pantalla de 1920x1080px en contexto de tp se realizo la escritura de un codigo base html5 acompañado de un css incorporando diferentes escrituras de codigo o tecnologias como flexbox.
