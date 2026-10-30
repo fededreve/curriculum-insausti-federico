@@ -1,0 +1,398 @@
+/* ==========================================================================
+   RESET & VARIABLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0d0d0d;
+    --text-white: #ffffff;
+    --accent-red: #ff1a1a;
+    --card-bg: #d9d9d9;
+    --font-heading: 'Archivo', sans-serif;
+    --font-body: 'Libre Baskerville', serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-heading);
+    overflow-x: hidden;
+    line-height: 1.5;
+    padding: 20px 163px;
+    max-width: 1920px;
+}
+
+/* ==========================================================================
+   ELEMENTOS DE ACENTO & TIPOGRAFÍA GLOBAL
+   ========================================================================== */
+.dot {
+    color: var(--accent-red);
+}
+
+.red-symbol {
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+.bio-text {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-white);
+}
+
+.bio-text p {
+    margin-bottom: 16px;
+}
+
+.bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Red Accent Badge Overlay */
+.badge-container {
+    position: relative;
+}
+
+.red-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-red);
+    z-index: 2;
+}
+
+/* Placeholders para contenedores de imágenes */
+.card {
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card img,
+.card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================================================
+   HEADER & NAVEGACIÓN
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 163px 0;
+}
+
+header .brand {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 2.8rem;
+    font-style: regular;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #ff1a1a;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-red);
+}
+
+/* ==========================================================================
+   MAIN CONTENT & TÍTULO
+   ========================================================================== */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   SECCIÓN 1: PRINCIPALES
+   ========================================================================== */
+#principales {
+    display: flex;
+    gap: 16px;
+    height: 380px;
+}
+
+#principales .card {
+    flex: 1;
+}
+
+#principales .card:nth-child(4) {
+    flex: 0.5;
+    /* Mantiene la columna angosta de la derecha según Figma */
+}
+
+/* ==========================================================================
+   SECCIÓN 2: PEQUEÑAS PIEZAS
+   ========================================================================== */
+#pequenas-piezas {
+    display: flex;
+    gap: 16px;
+    height: 100px;
+}
+
+#pequenas-piezas .card {
+    flex: 1;
+}
+
+/* ==========================================================================
+   SECCIÓN 3: TRABAJO DESTACADO
+   ========================================================================== */
+#trabajo-destacado {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+#trabajo-destacado .col-left {
+    display: flex;
+    flex: 2;
+    gap: 16px;
+}
+
+#trabajo-destacado .card.large {
+    flex: 1.2;
+    height: 360px;
+}
+
+#trabajo-destacado .stacked-cards {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 16px;
+}
+
+#trabajo-destacado .stacked-cards .card {
+    height: calc(50% - 8px);
+}
+
+#trabajo-destacado .col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   SECCIÓN 4: VIDEO / BANNER
+   ========================================================================== */
+#video {
+    display: flex;
+    width: 100%;
+}
+
+#video .video-card {
+    width: 100%;
+    height: 400px;
+}
+
+/* LIBRO INTERACTIVO */
+#libro h2 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.book-embed {
+    position: relative;
+    width: 100%;
+    min-height: 324px;
+    aspect-ratio: 5 / 3;
+}
+
+.book-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================================
+   SECCIÓN 5: PIEZAS VARIAS
+   ========================================================================== */
+#piezas-varias {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.flex-row {
+    display: flex;
+    gap: 16px;
+    min-height: 280px;
+}
+
+.col-item {
+    flex: 1;
+}
+
+.col-item.wide {
+    flex: 2;
+}
+
+.col-item.bio-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 15px;
+}
+
+.stacked-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stacked-col .card {
+    flex: 1;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    padding-top: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.redes {
+    display: flex;
+    gap: 40px;
+}
+
+.redes a {
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.redes a:hover {
+    color: var(--accent-red);
+}
+
+/* ==========================================================================
+   ADAPTABILIDAD RESPONSIVE
+   ========================================================================== */
+@media (max-width: 992px) {
+    body {
+        padding: 30px 20px;
+    }
+
+    #principales {
+        height: 260px;
+    }
+
+    #trabajo-destacado {
+        flex-direction: column;
+    }
+
+    #trabajo-destacado .col-right {
+        padding: 20px 0;
+    }
+
+    .flex-row {
+        flex-direction: column;
+    }
+
+    .col-item.wide,
+    .col-item {
+        width: 100%;
+        height: 220px;
+    }
+
+    .col-item.bio-text {
+        height: auto;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    #principales,
+    #pequenas-piezas {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #principales .card {
+        height: 200px;
+    }
+
+    #pequenas-piezas .card {
+        height: 80px;
+    }
+
+    #trabajo-destacado .col-left {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}

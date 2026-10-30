@@ -1,0 +1,314 @@
+/* ==========================================================================
+   1. RESET Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Archivo', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  line-height: 1.5;
+  padding: 20px 163px;
+  max-width: 1920px;
+}
+
+/* ==========================================================================
+   2. HEADER Y NAVEGACIÓN
+   ========================================================================== */
+header {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 163px 0;
+}
+
+.logo {
+    font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 2.8rem;
+  font-style: regular;
+  font-weight: 700; 
+  letter-spacing: -1px;
+}
+
+
+.logo span,
+h1 span {
+    color: #ff1a1a;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA PRINCIPAL (MAIN)
+   ========================================================================== */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+}
+
+/* Título Principal */
+h1 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+    max-width: 450px; /* Restricción para evitar saltos <br> forzados */
+}
+
+/* ==========================================================================
+   4. FORMULARIO
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 680px;
+    margin-bottom: 50px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.field-group.full-width {
+    width: 100%;
+}
+
+.field-group.half-width {
+    max-width: 50%;
+}
+
+label {
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* Inputs y Textarea */
+input[type="text"],
+textarea {
+    width: 100%;
+    background-color: #8c8c8c;
+    border: none;
+    border-radius: 0;
+    padding: 14px 16px;
+    color: #0d0d0d;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-size: 13px;
+    outline: none;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #333333;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Campo especial de carga de archivo (Bocetos) */
+.file-upload {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8c8c8c;
+    padding: 10px 16px;
+}
+
+.upload-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1a1a1a;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.upload-info .icon {
+    fill: #1a1a1a;
+}
+
+.btn-upload {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Archivo', sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 10px 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* ==========================================================================
+   5. SECCIÓN DE CONTACTO DIRECTO
+   ========================================================================== */
+h2 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+h2 span {
+    color: #ff1a1a;
+    margin-right: 2px;
+}
+
+.direct-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.direct-contact .icon-mail {
+    fill: #ffffff;
+}
+
+.direct-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #1a1a1a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+.copy-symbol {
+    color: #ff1a1a;
+}
+
+.social-links {
+    display: flex;
+    gap: 40px;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   7. ADAPTABILIDAD RESPONSIVE (MOBILE-FIRST ADAPTATION)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .field-group.half-width {
+        max-width: 100%;
+    }
+
+    .file-upload {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}

@@ -1,5 +1,5 @@
 /* ==========================================
-   RESET & VARIABLES GENERALES
+   RESET & ESTILOS GENERALES
    ========================================== */
 * {
   box-sizing: border-box;
@@ -10,25 +10,32 @@
 body {
   background-color: #0d0d0d;
   color: #ffffff;
-  font-family: 'Archivo', sans-serif; /* Tipografía Archivo por defecto */
+  font-family: 'Archivo', sans-serif;
   line-height: 1.5;
-  padding: 2rem 4rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 20px 163px;
+  max-width: 1920px;
 }
 
 /* ==========================================
-   HEADER & NAV
+   CABECERA Y NAVEGACIÓN 
    ========================================== */
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0 4rem 0;
+  padding: 24px 0 163px 0;
 }
 
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+/* ==========================================
+   ELEMENTOS GENERALES
+   ========================================== */
 .logo {
-  font-family: 'Libre Baskerville', Georgia, serif; /* Baskerville para el logo */
+  font-family: 'Libre Baskerville', Georgia, serif;
   font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: -1px;
@@ -36,11 +43,6 @@ body {
 
 .logo span {
   color: #ff1a1a;
-}
-
-.nav {
-  display: flex;
-  gap: 3rem;
 }
 
 .boton-head {
@@ -61,20 +63,22 @@ body {
    SECCIÓN FOTO 
    ========================================== */
 .seccion-foto {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 3rem;
-  align-items: end;
-  margin-bottom: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 48px;
+  margin-bottom: 96px;
 }
 
 .titulo-principal {
   font-family: 'Archivo', sans-serif;
   font-size: 5rem;
   font-weight: 900;
-  line-height: 0.85;
+  line-height: 1;
   letter-spacing: 2px;
   text-transform: uppercase;
+  max-width: 250px;
+  word-wrap: break-word;
 }
 
 .dot-red {
@@ -84,6 +88,7 @@ body {
 .col-foto {
   display: flex;
   justify-content: center;
+  flex: 1;
 }
 
 .foto-perfil {
@@ -98,10 +103,10 @@ body {
 .col-descripcion {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
+  flex: 1;
 }
 
-/* Textos corridos en Baskerville  */
 .texto-serif {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-style: italic;
@@ -119,18 +124,18 @@ body {
    SECCIÓN HOLA
    ========================================== */
 .seccion-hola {
-  margin-bottom: 6rem;
-  max-width: 650px;
+  margin-bottom: 96px;
+  max-width: 500px;
 }
 
 .titulo-hola {
   font-family: 'Archivo', sans-serif;
   font-size: 2.8rem;
   font-weight: 900;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 4px;
   letter-spacing: -0.5px;
 }
 
@@ -143,14 +148,14 @@ body {
 .texto-hola {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
 }
 
 /* ==========================================
-   SECCIÓN CLIENTES
+   SECCIÓN CLIENTES 
    ========================================== */
 .seccion-clientes {
-  margin-bottom: 6rem;
+  margin-bottom: 96px;
 }
 
 .titulo-seccion {
@@ -158,23 +163,23 @@ body {
   font-size: 1.3rem;
   font-weight: 900;
   letter-spacing: 2px;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   text-transform: uppercase;
 }
 
 .grid-clientes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  display: flex;
+  gap: 32px;
 }
 
 .card-cliente {
   background-color: #f4f3ef;
+  flex: 1;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 40px;
   border-radius: 2px;
 }
 
@@ -187,11 +192,11 @@ body {
 /* ==========================================
    FOOTER
    ========================================== */
-.footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 4rem;
+  padding-top: 64px;
   border-top: 1px solid #1a1a1a;
 }
 
@@ -209,7 +214,7 @@ body {
 
 .social-links {
   display: flex;
-  gap: 4rem;
+  gap: 64px;
 }
 
 .social-links a {
@@ -227,45 +232,47 @@ body {
 }
 
 /* ==========================================
-   RESPONSIVE (Adaptación a pantallas pequeñas)
+   RESPONSIVE 
    ========================================== */
 @media (max-width: 992px) {
   body {
-    padding: 1.5rem 2rem;
+    padding: 24px 32px;
   }
 
   .seccion-foto {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
   }
 
   .titulo-principal {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    max-width: 100%;
   }
 
   .grid-clientes {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    flex-direction: column;
   }
 }
 
 @media (max-width: 600px) {
-  .header {
+  header {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 24px;
     align-items: flex-start;
   }
 
-  .nav {
-    gap: 1.5rem;
+  nav {
+    gap: 24px;
   }
 
-  .footer {
+  footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 32px;
   }
 
   .social-links {
-    gap: 2rem;
+    gap: 32px;
   }
 }
