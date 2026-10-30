@@ -38,10 +38,9 @@
 * {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
-    font-variation-settings: "wdth" width;
-    background-color: brown;
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 h1,
@@ -54,7 +53,6 @@ h3 {
 h2 {
     font-family: "Roboto bold", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: bold;
     font-variation-settings: "wdth" width;
 }
@@ -62,7 +60,15 @@ h2 {
 footer {
     font-family: "Roboto destacados", sans-serif;
     font-optical-sizing: auto;
-    font-style: 100;
-    background-color: black; 
+    background-color: black;
     color: white;
+}
+
+header {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
 }
